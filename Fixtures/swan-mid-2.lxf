@@ -10,7 +10,7 @@
       "description": "Universe Number for Host"
     },
     "hostParam": {
-      "type": "string", "default": "text",
+      "type": "string", "default": "127.0.0.1",
       "label": "Host",
       "description": "IP Address of Host"
     },

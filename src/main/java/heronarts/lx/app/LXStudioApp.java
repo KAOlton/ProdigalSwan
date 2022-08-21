@@ -28,6 +28,9 @@ import heronarts.lx.studio.LXStudio;
 import heronarts.p4lx.ui.component.UICollapsibleSection;
 import heronarts.p4lx.ui.component.UIKnob;
 import processing.core.PApplet;
+import titanicsend.pattern.yoffa.config.OrganicPatternConfig;
+import titanicsend.pattern.yoffa.effect.AlternatingDotsEffect;
+import titanicsend.pattern.yoffa.effect.shaders.ElectricShader;
 
 /**
  * This is an example top-level class to build and run an LX Studio
@@ -101,15 +104,31 @@ public class LXStudioApp extends PApplet implements LXPlugin {
     // available.
 
     // Register custom pattern and effect types
-    lx.registry.addPattern(heronarts.lx.app.pattern.AppPattern.class);
-    lx.registry.addPattern(heronarts.lx.app.pattern.AppPatternWithUI.class);
-    lx.registry.addEffect(heronarts.lx.app.effect.AppEffect.class);
+    lx.registry.addPattern(titanicsend.pattern.yoffa.media.BasicImagePattern.class);
+    lx.registry.addPattern(titanicsend.pattern.yoffa.media.BasicVideoPattern.class);
+
+    // Patterns/effects that currently conform to art direction standards
+    lx.registry.addPattern(OrganicPatternConfig.StarryOutrun.class);
+    lx.registry.addPattern(OrganicPatternConfig.SwirlPanels.class);
+    lx.registry.addPattern(OrganicPatternConfig.NeonBarsPanels.class);
+    lx.registry.addPattern(OrganicPatternConfig.NeonCellsLegacy.class);
+    lx.registry.addPattern(OrganicPatternConfig.WaterPanels.class);
+    lx.registry.addPattern(OrganicPatternConfig.WavyPanels.class);
+    lx.registry.addPattern(OrganicPatternConfig.NeonSnake.class);
+  //  lx.registry.addPattern(OrganicPatternConfig.PulseCenter.class);
+    lx.registry.addPattern(OrganicPatternConfig.PulseSide.class);
+  //  lx.registry.addPattern(OrganicPatternConfig.AlternatingDots.class);
+    lx.registry.addPattern(OrganicPatternConfig.BreathingDots.class);
+    lx.registry.addPattern(OrganicPatternConfig.PowerGrid.class);
+    lx.registry.addPattern(OrganicPatternConfig.RhythmicFlashStatic.class);
+  //  lx.registry.addPattern(OrganicPatternConfig.MatrixScroller.class);
+
 
 
     // Create an instance of your global component and register it with the LX engine
     // so that it can be saved and loaded in project files
-    this.myComponent = new MyComponent(lx);
-    lx.engine.registerComponent("myComponent", this.myComponent);
+//    this.myComponent = new MyComponent(lx);
+//    lx.engine.registerComponent("myComponent", this.myComponent);
 
   }
 
@@ -119,21 +138,21 @@ public class LXStudioApp extends PApplet implements LXPlugin {
     // for headless mode should go in the raw initialize method above.
   }
 
-  public static class UIMyComponent extends UICollapsibleSection {
-    public UIMyComponent(LXStudio.UI ui, MyComponent myComponent) {
-      super(ui, 0, 0, ui.leftPane.global.getContentWidth(), 80);
-      setTitle("MY COMPONENT");
-
-      new UIKnob(0, 0, myComponent.param1).addToContainer(this);
-      new UIKnob(40, 0, myComponent.param2).addToContainer(this);
-    }
-  }
+//  public static class UIMyComponent extends UICollapsibleSection {
+//    public UIMyComponent(LXStudio.UI ui, MyComponent myComponent) {
+//      super(ui, 0, 0, ui.leftPane.global.getContentWidth(), 80);
+//      setTitle("MY COMPONENT");
+//
+//      new UIKnob(0, 0, myComponent.param1).addToContainer(this);
+//      new UIKnob(40, 0, myComponent.param2).addToContainer(this);
+//    }
+//  }
 
   public void onUIReady(LXStudio lx, LXStudio.UI ui) {
     // At this point, the LX Studio application UI has been built. You may now add
     // additional views and components to the UI hierarchy.
-    new UIMyComponent(ui, this.myComponent)
-    .addToContainer(ui.leftPane.global);
+//    new UIMyComponent(ui, this.myComponent)
+//    .addToContainer(ui.leftPane.global);
   }
 
   @Override

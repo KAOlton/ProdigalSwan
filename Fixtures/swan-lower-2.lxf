@@ -80,13 +80,13 @@
           "protocol": "artnet",
           "universe": "${universeParam}",
           "host": "${hostParam}",
-          "start": 0, "num": 58
+          "start": 0, "num": 48
         },
         {
           "protocol": "artnet",
           "universe": "${universeParam}",
           "host": "${host2Param}",
-          "start": 0, "num": 58
+          "start": 0, "num": 48
         }    
       ],
   "meta": {
