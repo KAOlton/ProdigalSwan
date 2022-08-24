@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lx-0.4.1-jar-with-dependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/third-party/LXStudio-IDE-master/lib/lx-0.4.1-jar-with-dependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

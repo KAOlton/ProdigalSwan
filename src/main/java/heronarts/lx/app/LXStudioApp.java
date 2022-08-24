@@ -169,6 +169,18 @@ public class LXStudioApp extends PApplet implements LXPlugin {
    * @param args Command-line arguments
    */
   public static void main(String[] args) {
+
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libgluegen_rt.dylib");
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libjogl_desktop.dylib");
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libjogl_mobile.dylib");
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libnativewindow_awt.dylib");
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libnativewindow_macosx.dylib");
+//    System.load("/Users/keeganolton/Documents/GitHub/ProdigalSwanLX/third-party/LXStudio-IDE-master/lib/processing-4.0b8/macos-x86_64/libnewt_head.dylib");
+
+
+
+    println("LOAD SUCCESSFUL");
+
     LX.log("Initializing LX version " + LXStudio.VERSION);
     boolean headless = false;
     File projectFile = null;
@@ -223,6 +235,9 @@ public class LXStudioApp extends PApplet implements LXPlugin {
       }
       LX.headless(flags, projectFile);
     } else {
+      for(String s : args) {
+        println("ABOUT TO CALL WITH ARGS: " + s);
+      }
       PApplet.main("heronarts.lx.app.LXStudioApp", args);
     }
   }

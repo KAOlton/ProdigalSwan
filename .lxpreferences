@@ -1,0 +1,16 @@
+{
+  "version": "0.4.1",
+  "projectFileName": "08.21.2022 Mappings",
+  "windwWidth": 1016,
+  "windowHeight": 693,
+  "uiZoom": 100,
+  "focusChannelOnCue": false,
+  "focusActivePattern": false,
+  "sendCueToOutput": false,
+  "showHelpBar": true,
+  "schedulerEnabled": false,
+  "showCpuLoad": false,
+  "registry": {
+    "plugins": []
+  }
+}

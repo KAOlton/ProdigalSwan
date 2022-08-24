@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="p4lx-0.4.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/third-party/LXStudio-IDE-master/lib/p4lx-0.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
